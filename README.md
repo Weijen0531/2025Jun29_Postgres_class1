@@ -8,11 +8,8 @@
     
 ### git的提交設定
 git config --global user.name "weijen0531"
-
 git config --global user.email "handychien@hotmail.com"
-
 git config --global pull.rebase false
-
 git config --global credential.name "github的帳號"
 
 ## 上課的連結
