@@ -75,3 +75,47 @@ DELETE FROM table_name;
 ``` sql
 DELETE FROM cars WHERE brand = 'Volvo';
 ``` 
+### To retrieve data frim a table in PostgresSQL
+``` sql
+SELECT 
+  select_columnns_name
+FROM 
+  table_name 
+WHERE 
+  condition 
+ORDER BY 
+   sort_expression;
+```
+
+### WHERE 比較運算子
+- =
+- >
+- <
+- >=
+- <=
+- <> or !=
+- AND
+- OR
+- IN
+- BETWEEN AND
+- LIKE
+- IS NULL
+- NOT
+
+## 修改和刪除資料
+
+### 語法:
+
+```sql
+UPDATE table_name
+SET column1 = value1,
+    column2 = value2,
+    ...
+WHERE condition;
+```
+
+
+```sql
+DELETE FROM table_name
+WHERE condition;
+```

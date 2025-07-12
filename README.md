@@ -23,3 +23,20 @@ https://github.com/roberthsu2003/python-SQLite-MySQL
    table_constraints
 );
 >
+### To retrieve data frim a table in PostgresSQL
+``` sql
+SELECT 
+  select_list 
+FROM 
+  table_name 
+WHERE 
+  condition 
+ORDER BY 
+  sort_expression;
+```
+ 
+###  Basic syntax
+``` sql
+SELECT column1, column2, ...
+FROM table_name;
+```
