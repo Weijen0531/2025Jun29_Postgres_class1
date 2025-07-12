@@ -55,3 +55,23 @@ VALUES
   ('BMW', 'M1', 1978),
   ('Toyota', 'Celica', 1975);
 ```
+#### Insert Without Specifying Columns
+> If you provide values for all columns in the correct order, you can omit the column list:
+``` sql
+INSERT INTO cars
+VALUES ('Honda', 'Civic', 2020);
+```
+
+### Reomve a data in the table
+* Basic Syntax
+``` sql
+DELETE FROM table_name WHERE condition;
+```
+* Delete all rows
+``` sql
+DELETE FROM table_name;
+```
+* Delete specific rows
+``` sql
+DELETE FROM cars WHERE brand = 'Volvo';
+``` 
