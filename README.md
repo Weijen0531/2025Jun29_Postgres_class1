@@ -1,6 +1,6 @@
 # 2025Jun29_Postgres_class1
 致理 徐國堂老師 
-        簡偉仁
+        簡偉仁 學生
 
 ## 2025July07 building this afternoon
 ### 安裝 Ｐostgres 在 Docker 
