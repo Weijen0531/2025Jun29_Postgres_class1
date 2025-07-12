@@ -25,3 +25,13 @@ CREATE TABLE IF NOT EXIST student(
 );
 
 ```
+### Remove Table (Drop Table)
+#### Basic Syntax 
+``` sql
+DROP TABLE table_name;
+```
+#### Extended Syntax
+``` sql
+DROP TABLE [IF EXISTS] table_name [, ...] [CASCADE | RESTRICT];
+```
+
