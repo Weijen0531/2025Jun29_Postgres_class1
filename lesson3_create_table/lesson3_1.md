@@ -8,3 +8,20 @@ CREATE TABLE [IF NOT EXISTS] table_name (
    table_constraints
 );
 ```
+#### Constraints
+PostgreSQL includes the following column constraints:
+
+1.NOT NULL– ensures that the values in a column cannot be NULL.
+2.UNIQUE – ensures the values in a column are unique across the rows within the same table.
+3.PRIMARY KEY – a primary key column uniquely identifies rows in a table. A table can have one and only one primary key. The primary key constraint allows you to define the primary key of a table.
+4.CHECK – ensures the data must satisfy a boolean expression. For example, the value in the price column must be zero or positive.
+5.FOREIGN KEY – ensures that the values in a column or a group of columns from a table exist in a column or group of columns in another table. Unlike the primary key, a table can have many foreign keys.
+Table constraints are similar to column constraints except that you can include more than one column in the table constraint.
+```sql
+CREATE TABLE IF NOT EXIST student(
+    student_id SERIAL PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    major VARCHAR(20) UNIQUE
+);
+
+```
