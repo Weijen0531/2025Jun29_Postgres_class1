@@ -34,4 +34,24 @@ DROP TABLE table_name;
 ``` sql
 DROP TABLE [IF EXISTS] table_name [, ...] [CASCADE | RESTRICT];
 ```
-
+``` sql
+DROP TABLE IF EXISTS student;
+```
+### Insert column 
+#### Basic Syntax
+``` sql
+INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
+```
+```sql
+INSERT INTO student ('name','major',)
+ VALUES ('Andy','Math')
+```
+#### Insert multiple Rows
+```sql
+INSERT INTO cars (brand, model, year)
+VALUES 
+  ('Volvo', 'p1800', 1968),
+  ('BMW', 'M1', 1978),
+  ('Toyota', 'Celica', 1975);
+```
