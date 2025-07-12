@@ -103,6 +103,11 @@ ORDER BY
 - NOT
 
 ## 修改和刪除資料
+``` sql
+SELECT *
+FROM student
+WHERE major in('英語','生物','歷史')
+```
 
 ### 語法:
 
@@ -113,7 +118,12 @@ SET column1 = value1,
     ...
 WHERE condition;
 ```
-
+### delete and modify multiple rows
+UPDATE table_name
+SET column1 = value1,
+    column2 = value2,
+    ...
+WHERE condition in();
 
 ```sql
 DELETE FROM table_name
