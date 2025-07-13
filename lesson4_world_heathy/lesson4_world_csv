@@ -13,7 +13,7 @@ SELECT SUM(總確診數) AS 總確診數
 FROM world
 WHERE 日期 BETWEEN '2020-01-01' AND '2020-12-31';
 ``` 
-
+#### The SELECT ... AS syntax in PostgreSQL is used to assign an alias—a temporary name
 |總確診數|
 | --- |
 | 31653752081 |
