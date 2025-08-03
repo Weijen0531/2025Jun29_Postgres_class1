@@ -4,11 +4,22 @@
 import psycopg2
 import os
 
-def create_connection()
+def create_connection():
     conn = psycopg2.connect(
         host="host.docker.internal",
         database="postgres",
         user="postgres",
+
+    # 測試連接是否成功
+    cursor = conn.cursor()
+    cursor.execute("SELECT version();")
+    db_version = cursor.fetchone()
+    print(f"PostgreSQL 資料庫版本: {db_version[0]}")
+
+    # 關閉連接
+    cursor.close()
+    conn.close()
+V    print("資料庫連接已關閉")
         password="raspberry",
         port="5432"
     )
