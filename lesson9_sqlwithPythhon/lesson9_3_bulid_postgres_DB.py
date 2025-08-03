@@ -4,34 +4,42 @@
 import psycopg2
 import os
 
+def execute_query(conn, query):
+    """執行 SQL 查詢"""
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(query)
+            result = cursor.fetchall()
+            return result
+    except psycopg2.Error as e:
+        print(f"執行查詢時發生錯誤: {e}")
+        return None
+
 def create_connection():
     conn = psycopg2.connect(
         host="host.docker.internal",
         database="postgres",
         user="postgres",
-
-    # 測試連接是否成功
-    cursor = conn.cursor()
-    cursor.execute("SELECT version();")
-    db_version = cursor.fetchone()
-    print(f"PostgreSQL 資料庫版本: {db_version[0]}")
-
-    # 關閉連接
-    cursor.close()
-    conn.close()
-V    print("資料庫連接已關閉")
         password="raspberry",
         port="5432"
     )
+    return conn
 
 def main():
     """主程式"""
     conn = create_connection()
     if not conn:
         print("無法連接到資料庫，程式結束")
-        sys.exit(1)
+        return
     else:
-    print("成功連接到資料庫！")
+        print("成功連接到資料庫！")
+        query = """
+        SELECT count(*) AS "筆數“:
+        FROM "台鐵車站資訊“;
+        """
+        result = execute_query(conn,query)
+        print("台鐵車站資訊:",result)
+        conn.close()
 
 if __name__ == "__main__":
     main()
