@@ -34,7 +34,7 @@ def main():
     else:
         print("成功連接到資料庫！")
         query = """
-        SELECT count(*) AS "筆數“:
+        SELECT count(*) AS "筆數“
         FROM "台鐵車站資訊“;
         """
         result = execute_query(conn,query)
