@@ -38,7 +38,7 @@ def main():
         FROM "台鐵車站資訊“;
         """
         result = execute_query(conn,query)
-        print("台鐵車站資訊:",result)
+        print("台鐵車站資訊",result)
         conn.close()
 
 if __name__ == "__main__":
