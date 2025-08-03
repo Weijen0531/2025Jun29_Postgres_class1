@@ -3,7 +3,7 @@
         簡偉仁 學生
 
 ## 2025July07 building this afternoon
-### 安裝 Ｐostgres 在 Docker 
+### 安裝 Postgres 在 Docker 
 > docker run --name my-postgres -e POSTGRES_PASSWORD=your_password -d -p 5432:5432 -v /your/local/data:/var/lib/postgresql/data postgres
     
 ### git的提交設定
