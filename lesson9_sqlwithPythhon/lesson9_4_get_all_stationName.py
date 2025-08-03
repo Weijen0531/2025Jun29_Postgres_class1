@@ -1,6 +1,5 @@
 import psycopg2
 
-
 def create_connection():
     conn = psycopg2.connect(
         host="host.docker.internal",
