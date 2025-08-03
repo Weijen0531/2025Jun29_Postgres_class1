@@ -10,6 +10,7 @@ def execute_query(conn, query):
         with conn.cursor() as cursor:
             cursor.execute(query)
             result = cursor.fetchall()
+            cursor.close()
             return result
     except psycopg2.Error as e:
         print(f"執行查詢時發生錯誤: {e}")
@@ -38,7 +39,7 @@ def main():
         FROM "台鐵車站資訊“;
         """
         result = execute_query(conn,query)
-        print("台鐵車站資訊",result)
+        print("台鐵車站資訊:",result)
         conn.close()
 
 if __name__ == "__main__":
