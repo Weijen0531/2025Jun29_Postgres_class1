@@ -15,6 +15,9 @@
 ## 上課的連結
 https://github.com/roberthsu2003/python-SQLite-MySQL
 
+### 上課習題和解答
+https://github.com/roberthsu2003/__2025_06_29_chihlee_postgres__
+
 ### Create table 
 > CREATE TABLE [IF NOT EXISTS] table_name (
    column1 datatype(length) column_constraint,
